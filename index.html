@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/64d58efce2.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <!-- <span class="big-circle"></span>
+      <img src="img/shape.png" class="square" alt="" /> -->
+      <div class="form">
+        <div class="contact-info">
+          <h3 class="title">Let's get in touch</h3>
+          <p class="text">
+            Your HOME is the biggest investment for majority of us. 
+            If you are having to make a tough decision of selling vs 
+            renting vs keeping your home, I have an easy process to offer 
+            you the precise info you would need to make a decision. Please 
+            click on this link to get more info about us: My Son, My Daughter 
+            and Me. 😊 The Tolooee Team Puts the T in Team!
+          </p>
+
+          <div class="info">
+            <div class="information">
+              <!-- <img src="img/location.png" class="icon" alt="" />
+              <p>106 N Tejon Street 80918</p> -->
+            </div>
+            <div class="information">
+                <a class="PDF" href="file:///C:/Users/kaivo/Downloads/Updated%20Metro%20Real%20Estate%20Group.pdf">More About Us!</a>  
+            </div>
+            <div class="information">
+                <a class="email" href="mailto:TRESMREG@outlook.com">Email Me</a> 
+            </div>
+            <div class="information">
+                <a class="phone number" href="tel:719-310-6061">Call Me</a>              
+            </div>
+            <img src="images/dadsprofilepicture.jpg" alt="Listing Agent Matt Tolooee" />
+          </div>
+
+          <div class="social-media">
+            <p>Connect with us :</p>
+            <div class="social-icons">
+              <a href="https://www.facebook.com/MetroRealEstateGroup">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <!-- <a href="#">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-linkedin-in"></i>
+              </a> -->
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form">
+          <span class="circle one"></span>
+          <span class="circle two"></span>
+
+          <form onsubmit= "sendEmail(); reset(); return false;">
+            <h3 class="title">Contact us</h3>
+            <div class="input-container">
+              <input type="text" id="Name" class="input" />
+              <label for="name">Name</label>
+              <span>Name</span>
+            </div>
+            <div class="input-container">
+              <input type="email" id="Email" class="input" />
+              <label for="email">Email</label>
+              <span>Email</span>
+            </div>
+            <div class="input-container">
+              <input type="tel" id="Phone" class="input" />
+              <label for="">Phone</label>
+              <span>Phone</span>
+            </div>
+            <div class="input-container textarea">
+              <input type="message" id="Message" class="input" />
+              <label for="">Message</label>
+              <span>Message</span>
+            </div>
+            <input type="submit" value="Send" class="btn" />
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail(){
+            Email.send({
+                Host : "smtp.live.com" ,
+                Username : "TRESMREG@outlook.com",
+                Password : "CHTookoonet1!",
+                From : document.getElementById("email").value,
+                Subject : "Contact Us",
+                Body : "Name: " + document.getElementById("Name").value
+                    + "<br> Email: " + document.getElementById("Email").value
+                    + "<br> Phone : " + document.getElementById("Phone").value
+                    + "<br> Message: " + document.getElementById("Message").value
+
+            }).then(
+                message => alert("Message Sent Succesfully")
+            );
+        }
+    </script>
+  </body>
+</html>
