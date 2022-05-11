@@ -71,7 +71,7 @@
             <span class="circle one"></span>
             <span class="circle two"></span>
   
-            <form action="index.html" autocomplete="off" action="https://formsubmit.co/el/legexa" method="POST">
+            <form action="index.html" autocomplete="off" action="https://formsubmit.co/el/legexa" method="GET">
               <h3 class="title">Contact us</h3>
               <div class="input-container">
                 <input type="text" name="name" class="input" />
@@ -106,7 +106,7 @@
             Email.send({
                 Host : "smtp.office365.com" ,
                 Username : "TRESMREG@outlook.com",
-                Password : "CHTookoonet1!",
+                Password : "",
                 From : document.getElementById("email").value,
                 Subject : "Contact Us",
                 Body : "Name: " + document.getElementById("Name").value
