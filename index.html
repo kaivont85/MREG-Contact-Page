@@ -66,8 +66,9 @@
           <span class="circle one"></span>
           <span class="circle two"></span>
 
-          <form onsubmit= "sendEmail(); reset(); return false;">
+
             <h3 class="title">Contact us</h3>
+            <form action="index.html" autocomplete="off"action="https://formspree.io/f/xbjwqoag" method="POST"></form> >
             <div class="input-container">
               <input type="text" id="Name" class="input" />
               <label for="name">Name</label>
@@ -89,13 +90,13 @@
               <span>Message</span>
             </div>
             <input type="submit" value="Send" class="btn" />
-          </form>
+        </form>
         </div>
       </div>
     </div>
     <script src="script.js"></script>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
-    <script>
+    <!-- <script src="https://smtpjs.com/v3/smtp.js"></script> -->
+    <!-- <script>
         function sendEmail(){
             Email.send({
                 Host : "smtp.office365.com" ,
@@ -112,6 +113,6 @@
                 message => alert("Message Sent Succesfully")
             );
         }
-    </script>
+    </script> -->
   </body>
 </html>
